@@ -1,0 +1,27 @@
+{
+    "catchAll": {
+        "phrases": [
+            "Извините, непонятно"
+        ]
+    },
+    "speechNotRecognized": {
+        "phrases": [
+            "Вас плохо слышно, повторите, пожалуйста!"
+        ]
+    },
+    "fulfillment": {
+        "settings": {
+            "default": {
+                "url": ""
+            },
+            "channels": []
+        },
+        "actions": [
+            {
+                "state": "/newNode_0",
+                "action": "Приветствие",
+                "color": "#1ccad8"
+            }
+        ]
+    }
+}

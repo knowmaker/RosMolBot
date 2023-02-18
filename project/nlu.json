@@ -1,0 +1,318 @@
+{
+  "project" : {
+    "id" : "rosmolbot-249774977-ttm",
+    "name" : "rosmolbot-249774977-ttm",
+    "folder" : "/jaicp"
+  },
+  "settings" : {
+    "language" : "ru",
+    "spellingCorrection" : false,
+    "classificationAlgorithm" : "sts",
+    "timezone" : "UTC",
+    "extendedSettings" : {
+      "tokenizerEngine" : "mystem",
+      "allowedPatterns" : [ "agree", "disagree", "bad", "bot", "bye", "cannot", "clever", "compliment", "dontKnow", "gender", "good", "hello", "looser", "maybe", "me", "my", "need", "normal", "notNow", "now", "pls", "serviceHelperHuman", "stupid", "super", "sure", "thanks", "turnOff", "turnOn", "what", "why", "email", "smth", "obsceneWord", "continue", "shutUp", "stopGame", "stopGameStrong", "stopGameWeak" ],
+      "useShared" : true,
+      "zflPatternsEnabled" : true
+    },
+    "shared" : false
+  },
+  "intents" : [ {
+    "path" : "/newNode_6/1",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "есть"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "path" : "/newNode_6/2",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "нету"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "path" : "/newNode_35/1",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Домой"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "path" : "/newNode_13/1",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "далее"
+    }, {
+      "text" : "дальше"
+    }, {
+      "text" : "ок"
+    }, {
+      "text" : "окей"
+    }, {
+      "text" : "вперед"
+    }, {
+      "text" : "что дальше"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "path" : "/newNode_25/1",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "далее"
+    }, {
+      "text" : "дальше"
+    }, {
+      "text" : "ок"
+    }, {
+      "text" : "окей"
+    }, {
+      "text" : "вперед"
+    }, {
+      "text" : "что дальше"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "path" : "/newNode_27/1",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "далее"
+    }, {
+      "text" : "дальше"
+    }, {
+      "text" : "ок"
+    }, {
+      "text" : "окей"
+    }, {
+      "text" : "вперед"
+    }, {
+      "text" : "что дальше"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "path" : "/newNode_39/1",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "далее"
+    }, {
+      "text" : "дальше"
+    }, {
+      "text" : "ок"
+    }, {
+      "text" : "окей"
+    }, {
+      "text" : "вперед"
+    }, {
+      "text" : "что дальше"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "path" : "/newNode_16/1",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "далее"
+    }, {
+      "text" : "дальше"
+    }, {
+      "text" : "ок"
+    }, {
+      "text" : "окей"
+    }, {
+      "text" : "вперед"
+    }, {
+      "text" : "что дальше"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "path" : "/newNode_18/1",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "далее"
+    }, {
+      "text" : "дальше"
+    }, {
+      "text" : "ок"
+    }, {
+      "text" : "окей"
+    }, {
+      "text" : "вперед"
+    }, {
+      "text" : "что дальше"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "path" : "/newNode_20/1",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "далее"
+    }, {
+      "text" : "дальше"
+    }, {
+      "text" : "ок"
+    }, {
+      "text" : "окей"
+    }, {
+      "text" : "вперед"
+    }, {
+      "text" : "что дальше"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  } ],
+  "entities" : [ ],
+  "enabledSystemEntities" : [ ],
+  "spellerDictionary" : [ ],
+  "systemEntities" : [ {
+    "name" : "mystem.geo",
+    "enabled" : false
+  }, {
+    "name" : "mystem.persn",
+    "enabled" : false
+  }, {
+    "name" : "mystem.obsc",
+    "enabled" : false
+  }, {
+    "name" : "mystem.patrn",
+    "enabled" : false
+  }, {
+    "name" : "mystem.famn",
+    "enabled" : false
+  }, {
+    "name" : "pymorphy.romn",
+    "enabled" : false
+  }, {
+    "name" : "pymorphy.latn",
+    "enabled" : false
+  }, {
+    "name" : "pymorphy.numb",
+    "enabled" : false
+  }, {
+    "name" : "pymorphy.intg",
+    "enabled" : false
+  }, {
+    "name" : "pymorphy.abbr",
+    "enabled" : false
+  }, {
+    "name" : "pymorphy.name",
+    "enabled" : false
+  }, {
+    "name" : "pymorphy.surn",
+    "enabled" : false
+  }, {
+    "name" : "pymorphy.patr",
+    "enabled" : false
+  }, {
+    "name" : "pymorphy.geox",
+    "enabled" : false
+  }, {
+    "name" : "pymorphy.orgn",
+    "enabled" : false
+  }, {
+    "name" : "duckling.number",
+    "version" : "v1",
+    "enabled" : false
+  }, {
+    "name" : "duckling.ordinal",
+    "version" : "v1",
+    "enabled" : false
+  }, {
+    "name" : "duckling.amount-of-money",
+    "version" : "v1",
+    "enabled" : false
+  }, {
+    "name" : "duckling.distance",
+    "version" : "v1",
+    "enabled" : false
+  }, {
+    "name" : "duckling.time",
+    "version" : "v1",
+    "enabled" : false
+  }, {
+    "name" : "duckling.date",
+    "version" : "v1",
+    "enabled" : false
+  }, {
+    "name" : "duckling.time-of-day",
+    "version" : "v1",
+    "enabled" : false
+  }, {
+    "name" : "duckling.duration",
+    "version" : "v1",
+    "enabled" : false
+  }, {
+    "name" : "duckling.phone-number",
+    "version" : "v1",
+    "enabled" : false
+  }, {
+    "name" : "duckling.email",
+    "version" : "v1",
+    "enabled" : false
+  }, {
+    "name" : "duckling.url",
+    "version" : "v1",
+    "enabled" : false
+  }, {
+    "name" : "duckling.interval",
+    "version" : "v2",
+    "enabled" : false
+  }, {
+    "name" : "mlps-obscene.obscene",
+    "enabled" : false
+  }, {
+    "name" : "zb.datetime",
+    "enabled" : false
+  }, {
+    "name" : "zb.number",
+    "enabled" : false
+  } ],
+  "faq" : [ ]
+}

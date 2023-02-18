@@ -1,0 +1,88 @@
+name: empty
+
+entryPoint: entryPoint.sc
+
+botEngine: v2
+language: ru
+
+sts:
+  noMatchThreshold: 0.2
+
+caila:
+  noMatchThreshold: 0.2
+
+nlp:
+  tokenizer: myStem
+  morphology: pyMorphy
+  costStrategy: weighted
+  contextHistoryDepth: 1
+  nbest: 1
+  vocabulary: sys/zb-dictionaries/opencorpora/opcorpora-vocab.json
+  synonyms: sys/zb-dictionaries/opencorpora/weighted-synonyms-pmiIdf.json
+
+classifier:
+  engine: sts
+  noMatchThreshold: 0.2
+  parameters:
+    algorithm: match-aligner
+
+messages:
+  onError:
+    defaultMessage: null
+    defaultMessages:
+      - Сожалеем, произошла техническая ошибка.
+
+ner:
+  allowedPatterns:
+    - $agree
+    - $disagree
+    - $bad
+    - $bot
+    - $bye
+    - $cannot
+    - $clever
+    - $compliment
+    - $dontKnow
+    - $gender
+    - $good
+    - $hello
+    - $looser
+    - $maybe
+    - $me
+    - $my
+    - $need
+    - $normal
+    - $notNow
+    - $now
+    - $pls
+    - $serviceHelperHuman
+    - $stupid
+    - $super
+    - $sure
+    - $thanks
+    - $turnOff
+    - $turnOn
+    - $what
+    - $why
+    - $email
+    - $smth
+    - $obsceneWord
+    - $continue
+    - $shutUp
+    - $stopGame
+    - $stopGameStrong
+    - $stopGameWeak
+
+tests:
+    exclude:
+        - '*.xml'
+
+scriptsPreLoad:
+  global:
+   - /jslib/moment.min.js
+   - /jslib/underscore.js
+   - /jsapi/common.js
+   - /jsapi/http.js
+  local:
+   - /jsapi/mail.js
+   - /jsapi/reactions.js
