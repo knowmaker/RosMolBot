@@ -8,9 +8,14 @@
     "language" : "ru",
     "spellingCorrection" : false,
     "classificationAlgorithm" : "sts",
-    "timezone" : "UTC",
+    "timezone" : "Europe/Moscow",
     "extendedSettings" : {
       "tokenizerEngine" : "mystem",
+      "stsSettings" : {
+        "synonymMatch" : 1.0,
+        "throughPatternMatch" : 0.8,
+        "acronymMatch" : 1.0
+      },
       "allowedPatterns" : [ "agree", "disagree", "bad", "bot", "bye", "cannot", "clever", "compliment", "dontKnow", "gender", "good", "hello", "looser", "maybe", "me", "my", "need", "normal", "notNow", "now", "pls", "serviceHelperHuman", "stupid", "super", "sure", "thanks", "turnOff", "turnOn", "what", "why", "email", "smth", "obsceneWord", "continue", "shutUp", "stopGame", "stopGameStrong", "stopGameWeak" ],
       "useShared" : true,
       "zflPatternsEnabled" : true
@@ -46,7 +51,59 @@
     "enabled" : true,
     "shared" : false,
     "phrases" : [ {
-      "text" : "Домой"
+      "text" : "меню"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "path" : "/newNode_35/2",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "вопрос"
+    }, {
+      "text" : "задать вопрос"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "path" : "/newNode_48/1",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Мероприятия"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "path" : "/newNode_48/2",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Мои проекты"
+    }, {
+      "text" : "проекты"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "path" : "/newNode_11/1",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "дальше"
     } ],
     "classificationRules" : {
       "refs" : [ ]
@@ -76,6 +133,20 @@
     "patterns" : [ ],
     "priority" : 0
   }, {
+    "path" : "/newNode_13/3",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "назад"
+    }, {
+      "text" : "обратно"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
     "path" : "/newNode_25/1",
     "enabled" : true,
     "shared" : false,
@@ -98,6 +169,20 @@
     "patterns" : [ ],
     "priority" : 0
   }, {
+    "path" : "/newNode_25/3",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "назад"
+    }, {
+      "text" : "обратно"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
     "path" : "/newNode_27/1",
     "enabled" : true,
     "shared" : false,
@@ -113,6 +198,34 @@
       "text" : "вперед"
     }, {
       "text" : "что дальше"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "path" : "/newNode_27/3",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "документы"
+    }, {
+      "text" : "где документы"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "path" : "/newNode_27/4",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "назад"
+    }, {
+      "text" : "обратно"
     } ],
     "classificationRules" : {
       "refs" : [ ]
@@ -164,6 +277,20 @@
     "patterns" : [ ],
     "priority" : 0
   }, {
+    "path" : "/newNode_16/3",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "назад"
+    }, {
+      "text" : "обратно"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
     "path" : "/newNode_18/1",
     "enabled" : true,
     "shared" : false,
@@ -186,6 +313,34 @@
     "patterns" : [ ],
     "priority" : 0
   }, {
+    "path" : "/newNode_18/3",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "как"
+    }, {
+      "text" : "заполнение"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "path" : "/newNode_18/4",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Назад"
+    }, {
+      "text" : "обратно"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
     "path" : "/newNode_20/1",
     "enabled" : true,
     "shared" : false,
@@ -201,6 +356,20 @@
       "text" : "вперед"
     }, {
       "text" : "что дальше"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "path" : "/newNode_20/3",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "назад"
+    }, {
+      "text" : "обратно"
     } ],
     "classificationRules" : {
       "refs" : [ ]

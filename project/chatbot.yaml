@@ -1,88 +1,160 @@
-name: empty
-
-entryPoint: entryPoint.sc
-
+additionalEvents: [
+  ]
 botEngine: v2
-language: ru
-
-sts:
-  noMatchThreshold: 0.2
-
+botFolder: null
 caila:
-  noMatchThreshold: 0.2
-
-nlp:
-  tokenizer: myStem
-  morphology: pyMorphy
-  costStrategy: weighted
-  contextHistoryDepth: 1
-  nbest: 1
-  vocabulary: sys/zb-dictionaries/opencorpora/opcorpora-vocab.json
-  synonyms: sys/zb-dictionaries/opencorpora/weighted-synonyms-pmiIdf.json
-
+  noMatchThreshold: 0.1
 classifier:
   engine: sts
-  noMatchThreshold: 0.2
+  name: null
+  noMatchThreshold: 0.1
   parameters:
+    synonymMatch: 1.0
+    throughPatternMatch: 0.8
+    acronymMatch: 1.0
     algorithm: match-aligner
-
+  token: null
+customTags: [
+  ]
+defaultTimezone: null
+dependencies: [
+  ]
+entryPoint: entryPoint.sc
+exampleGroups: [
+  ]
+injector: {
+  }
+jsTests:
+  caseSensitive: true
+  exclude: [
+    ]
+  extensions:
+  - test.js
+  include: [
+    ]
+language: ru
+locale: ru_RU
+markClientPatterns: false
+matcherSettings: null
 messages:
   onError:
     defaultMessage: null
     defaultMessages:
-      - Сожалеем, произошла техническая ошибка.
-
+    - Сожалеем, произошла техническая ошибка.
+    locales: null
+name: empty
 ner:
   allowedPatterns:
-    - $agree
-    - $disagree
-    - $bad
-    - $bot
-    - $bye
-    - $cannot
-    - $clever
-    - $compliment
-    - $dontKnow
-    - $gender
-    - $good
-    - $hello
-    - $looser
-    - $maybe
-    - $me
-    - $my
-    - $need
-    - $normal
-    - $notNow
-    - $now
-    - $pls
-    - $serviceHelperHuman
-    - $stupid
-    - $super
-    - $sure
-    - $thanks
-    - $turnOff
-    - $turnOn
-    - $what
-    - $why
-    - $email
-    - $smth
-    - $obsceneWord
-    - $continue
-    - $shutUp
-    - $stopGame
-    - $stopGameStrong
-    - $stopGameWeak
-
-tests:
-    exclude:
-        - '*.xml'
-
+  - $agree
+  - $disagree
+  - $bad
+  - $bot
+  - $bye
+  - $cannot
+  - $clever
+  - $compliment
+  - $dontKnow
+  - $gender
+  - $good
+  - $hello
+  - $looser
+  - $maybe
+  - $me
+  - $my
+  - $need
+  - $normal
+  - $notNow
+  - $now
+  - $pls
+  - $serviceHelperHuman
+  - $stupid
+  - $super
+  - $sure
+  - $thanks
+  - $turnOff
+  - $turnOn
+  - $what
+  - $why
+  - $email
+  - $smth
+  - $obsceneWord
+  - $continue
+  - $shutUp
+  - $stopGame
+  - $stopGameStrong
+  - $stopGameWeak
+  allowedPatternsFile: null
+  allowedPatternsFromExamples: null
+  engine: null
+  includeAll: false
+  nonNerWeight: 0.9
+  scenarioFile: null
+  sourceBot: null
+  weight: 1.0
+nlp:
+  considerContextDepthInStateSelectionV2: true
+  contextHistoryDepth: 1
+  costStrategy: weighted
+  intentNoMatchThresholds: null
+  lengthLimit:
+    enabled: true
+    symbols: 400
+    words: 2147483647
+  modifyRequestInPreMatch: false
+  morphology: pyMorphy
+  nbest: 1
+  nbestExamples: null
+  nbestIntents: null
+  nbestPatterns: null
+  punctuations: null
+  rankByContext:
+    p1: 0.2
+    p2: 0.01
+  spellcheck: null
+  speller: null
+  srxPath: null
+  synonyms:
+    file: sys/zb-dictionaries/opencorpora/weighted-synonyms-pmiIdf.json
+    url: null
+  timeLimit:
+    enabled: true
+    timeout: 10000
+  tokenizer: myStem
+  tokenizerOptions: null
+  vocabulary:
+    file: sys/zb-dictionaries/opencorpora/opcorpora-vocab.json
+    url: null
+projectPreferences:
+  disableValidation: false
+  errorForUnhandledEvents: false
+  useFullStatesInJs: false
+regexCaseInsensitive: false
+sandbox:
+  checkInterval: 0
+  enabled: false
+  maxCPUTime: 0
+  maxMemory: 0
+scenarioLoadStrategy: v1
+scriptRuntime:
+  engine: v1
+  forceEs6: false
+  requirementsFile: package.json
 scriptsPreLoad:
   global:
-   - /jslib/moment.min.js
-   - /jslib/underscore.js
-   - /jsapi/common.js
-   - /jsapi/http.js
+  - /jslib/moment.min.js
+  - /jslib/underscore.js
+  - /jsapi/common.js
+  - /jsapi/http.js
   local:
-   - /jsapi/mail.js
-   - /jsapi/reactions.js
+  - /jsapi/mail.js
+  - /jsapi/reactions.js
+sts:
+  noMatchThreshold: 0.2
+tests:
+  caseSensitive: true
+  exclude:
+  - '*.xml'
+  include: [
+    ]
+threadCount: -1
+tokenizeWordsInPatterns: false

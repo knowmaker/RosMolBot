@@ -2,6 +2,18 @@ require: default-knowledge-base.sc
 
 require: default-knowledge-base.sc
 
+require: default-knowledge-base.sc
+
+require: default-knowledge-base.sc
+
+require: default-knowledge-base.sc
+
+require: default-knowledge-base.sc
+
+require: default-knowledge-base.sc
+
+require: default-knowledge-base.sc
+
 require: common.js
   module = sys.zfl-common
 

@@ -28,7 +28,14 @@
   }, {
     "id" : "/newNode_34",
     "name" : "col#0",
-    "actionTitles" : [ null ],
+    "actionTitles" : [ null, null ],
+    "x" : 0,
+    "y" : 0
+  }, {
+    "id" : "/newNode_45",
+    "name" : "col#0",
+    "boundsTo" : "/newNode_34",
+    "actionTitles" : [ ],
     "x" : 0,
     "y" : 0
   }, {
@@ -41,7 +48,27 @@
   }, {
     "id" : "/newNode_41",
     "name" : "col#0",
+    "actionTitles" : [ null, null ],
+    "x" : 0,
+    "y" : 0
+  }, {
+    "id" : "/newNode_48",
+    "name" : "col#0",
+    "boundsTo" : "/newNode_41",
     "actionTitles" : [ null ],
+    "x" : 0,
+    "y" : 0
+  }, {
+    "id" : "/newNode_43",
+    "name" : "col#0",
+    "boundsTo" : "",
+    "actionTitles" : [ ],
+    "x" : 0,
+    "y" : 0
+  }, {
+    "id" : "/newNode_47",
+    "name" : "col#0",
+    "actionTitles" : [ null, null ],
     "x" : 0,
     "y" : 0
   }, {
@@ -170,9 +197,22 @@
     "x" : 0,
     "y" : 0
   }, {
+    "id" : "/newNode_40",
+    "name" : "col#2",
+    "actionTitles" : [ null, null ],
+    "x" : 0,
+    "y" : 0
+  }, {
+    "id" : "/newNode_42",
+    "name" : "col#2",
+    "boundsTo" : "/newNode_40",
+    "actionTitles" : [ ],
+    "x" : 0,
+    "y" : 0
+  }, {
     "id" : "/newNode_7",
     "name" : "col#2",
-    "actionTitles" : [ null, null, null, null, null ],
+    "actionTitles" : [ null, null, null, null ],
     "x" : 0,
     "y" : 0
   }, {
@@ -232,6 +272,18 @@
     "name" : "col#2",
     "boundsTo" : "/newNode_21",
     "actionTitles" : [ null ],
+    "x" : 0,
+    "y" : 0
+  }, {
+    "id" : "/newNode_46",
+    "name" : "col#3",
+    "actionTitles" : [ null, null ],
+    "x" : 0,
+    "y" : 0
+  }, {
+    "id" : "/newNode_44",
+    "name" : "col#3",
+    "actionTitles" : [ null, null ],
     "x" : 0,
     "y" : 0
   } ]

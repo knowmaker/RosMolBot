@@ -7,7 +7,7 @@ theme: /
 
     state: newNode_9
         InputText:
-            actions = [{"buttons":[],"type":"buttons"}]
+            actions = [{"buttons":[{"name":"Задать вопрос","transition":"/newNode_41"}],"type":"buttons"}]
             prompt = Напишите, как к Вам удобно обращаться
             varName = name
             html = Напишите, как к Вам удобно обращаться
@@ -37,7 +37,7 @@ theme: /
             intent: /sys/aimylogic/ru/negation
             intent: /newNode_6/2
 
-            go!: /newNode_7
+            go!: /newNode_40
         init:
             $jsapi.bind({
                 type: "postProcess",
@@ -49,6 +49,8 @@ theme: /
 
     state: newNode_34
         a: Что-то пошло не так
+        # Transition /newNode_45
+        go!: /newNode_43
     @IntentGroup
         {
           "boundsTo" : "",
@@ -63,6 +65,11 @@ theme: /
             intent!: /newNode_35/1
 
             go!: /newNode_0
+
+        state: 2
+            intent!: /newNode_35/2
+
+            go!: /newNode_41
         init:
             $jsapi.bind({
                 type: "postProcess",
@@ -75,6 +82,78 @@ theme: /
     state: newNode_41
         a:  Если есть какие-нибудь вопросы обращайтесь.
             Можете указать любой раздел сайта и я про консультирую по нему
+        go!: /newNode_48
+    @IntentGroup
+        {
+          "boundsTo" : "/newNode_41",
+          "actions" : [ {
+            "buttons" : [ {
+              "name" : "Перевод на оператора",
+              "transition" : "/newNode_43"
+            }, {
+              "name" : "Позвонить",
+              "transition" : "/newNode_47"
+            }, {
+              "name" : "Мероприятия",
+              "transition" : "/newNode_8"
+            }, {
+              "name" : "Мои проекты",
+              "transition" : ""
+            } ],
+            "type" : "buttons"
+          } ],
+          "global" : false
+        }
+    state: newNode_48
+        state: 1
+            intent: /newNode_48/1
+
+            go!: /newNode_8
+
+        state: 2
+            intent: /newNode_48/2
+
+            go!: /newNode_7
+        init:
+            $jsapi.bind({
+                type: "postProcess",
+                path: "/newNode_48",
+                name: "newNode_48 buttons",
+                handler: function($context) {
+                  $reactions.buttons([
+                    {text: "Перевод на оператора"
+                    , transition: "/newNode_43"
+                    },
+                    {text: "Позвонить"
+                    , transition: "/newNode_47"
+                    },
+                    {text: "Мероприятия"
+                    , transition: "/newNode_8"
+                    },
+                    {text: "Мои проекты"
+                    },
+                  ]);
+                }
+            });
+
+    state: newNode_43
+        TransferToOperator:
+            titleOfCloseButton = Переключить на бота
+            messageBeforeTransfer = Вы будете переведены на оператора
+            messageBeforeTransferHtml = Вы будете переведены на оператора
+            ignoreOffline = true
+            messageForWaitingOperator = Вам ответит первый освободившийся оператор
+            messageForWaitingOperatorHtml = Вам ответит первый освободившийся оператор
+            dialogCompletedState = /newNode_41
+            sendMessagesToOperator = true
+            sendMessageHistoryAmount = 5
+            htmlEnabled = false
+            destination = 
+
+    state: newNode_47
+        a: Для консультации позвоните 84953083001 || html = "Для консультации позвоните 84953083001", htmlEnabled = true
+        script:
+            $reactions.timeout({interval: _.template('15 seconds', {variable: '$session'})($session), targetState: '/newNode_41'});
 
     state: newNode_4
         a: Это очень здорово, я помогу оформить заявку
@@ -101,6 +180,7 @@ theme: /
     state: newNode_11
         state: 1
             intent: /sys/aimylogic/ru/agreement
+            intent: /newNode_11/1
 
             go!: /newNode_12
         init:
@@ -126,7 +206,10 @@ theme: /
           "actions" : [ {
             "buttons" : [ {
               "name" : "Далее",
-              "transition" : ""
+              "transition" : "/newNode_24"
+            }, {
+              "name" : "Назад",
+              "transition" : "/newNode_8"
             } ],
             "type" : "buttons"
           } ],
@@ -142,6 +225,11 @@ theme: /
             intent: /sys/aimylogic/ru/agreement
 
             go!: /newNode_24
+
+        state: 3
+            intent: /newNode_13/3
+
+            go!: /newNode_8
         init:
             $jsapi.bind({
                 type: "postProcess",
@@ -150,6 +238,10 @@ theme: /
                 handler: function($context) {
                   $reactions.buttons([
                     {text: "Далее"
+                    , transition: "/newNode_24"
+                    },
+                    {text: "Назад"
+                    , transition: "/newNode_8"
                     },
                   ]);
                 }
@@ -166,6 +258,9 @@ theme: /
             "buttons" : [ {
               "name" : "Далее",
               "transition" : "/newNode_26"
+            }, {
+              "name" : "Назад",
+              "transition" : "/newNode_12"
             } ],
             "type" : "buttons"
           } ],
@@ -181,6 +276,11 @@ theme: /
             intent: /sys/aimylogic/ru/agreement
 
             go!: /newNode_26
+
+        state: 3
+            intent: /newNode_25/3
+
+            go!: /newNode_12
         init:
             $jsapi.bind({
                 type: "postProcess",
@@ -190,6 +290,9 @@ theme: /
                   $reactions.buttons([
                     {text: "Далее"
                     , transition: "/newNode_26"
+                    },
+                    {text: "Назад"
+                    , transition: "/newNode_12"
                     },
                   ]);
                 }
@@ -205,7 +308,13 @@ theme: /
           "actions" : [ {
             "buttons" : [ {
               "name" : "Далее",
-              "transition" : ""
+              "transition" : "/newNode_29"
+            }, {
+              "name" : "Назад",
+              "transition" : "/newNode_24"
+            }, {
+              "name" : "Документы для заполнения",
+              "transition" : "/newNode_46"
             } ],
             "type" : "buttons"
           } ],
@@ -221,6 +330,16 @@ theme: /
             intent: /sys/aimylogic/ru/agreement
 
             go!: /newNode_29
+
+        state: 3
+            intent: /newNode_27/3
+
+            go!: /newNode_46
+
+        state: 4
+            intent: /newNode_27/4
+
+            go!: /newNode_24
         init:
             $jsapi.bind({
                 type: "postProcess",
@@ -229,6 +348,13 @@ theme: /
                 handler: function($context) {
                   $reactions.buttons([
                     {text: "Далее"
+                    , transition: "/newNode_29"
+                    },
+                    {text: "Назад"
+                    , transition: "/newNode_24"
+                    },
+                    {text: "Документы для заполнения"
+                    , transition: "/newNode_46"
                     },
                   ]);
                 }
@@ -295,7 +421,7 @@ theme: /
 
     state: newNode_33
         HttpRequest:
-            url = https://smsc.ru/sys/send.php?login=av2004&psw=MS1597530!&phones=${emailto}&mes=Поздравляем+с+удачной+подачей+заявки!&sender=alvoronin2015@yandex.ru&subj=Росмолодежь.Гранты&mail=1&fileurl=https://static.tildacdn.com/tild3930-6436-4437-a665-303239386432/__-03.png
+            url = https://smsc.ru/sys/send.php?login=av2004&psw=MS1597530!&phones=${emailto}&mes=Поздравляем%20с%20удачной%20подачей%20заявки!&sender=alvoronin2015@yandex.ru&subj=Росмолодежь.Гранты&mail=1&fileurl=https://ambivert.club/wp-content/uploads/2019/03/ChEnnTeW4AEI2q9.jpg
             method = GET
             body = 
             okState = /newNode_31
@@ -387,8 +513,12 @@ theme: /
                 }
             });
 
-    state: newNode_7
+    state: newNode_40
         a: Ничего страшного, зайдите во вкладку Проект
+        # Transition /newNode_42
+        go!: /newNode_7
+
+    state: newNode_7
         a: Нажмите "Добавить проект"
         image: https://248305.selcdn.ru/zfl_prod/249774977/249774976/ajyNX9t0bG61P6Ao.jpg
         a: Следующие шаги уже более трудные, пишите мне после каждого из них
@@ -438,7 +568,10 @@ theme: /
           "actions" : [ {
             "buttons" : [ {
               "name" : "Далее",
-              "transition" : ""
+              "transition" : "/newNode_17"
+            }, {
+              "name" : "Назад",
+              "transition" : "/newNode_7"
             } ],
             "type" : "buttons"
           } ],
@@ -454,6 +587,11 @@ theme: /
             intent: /sys/aimylogic/ru/agreement
 
             go!: /newNode_17
+
+        state: 3
+            intent: /newNode_16/3
+
+            go!: /newNode_7
         init:
             $jsapi.bind({
                 type: "postProcess",
@@ -462,6 +600,10 @@ theme: /
                 handler: function($context) {
                   $reactions.buttons([
                     {text: "Далее"
+                    , transition: "/newNode_17"
+                    },
+                    {text: "Назад"
+                    , transition: "/newNode_7"
                     },
                   ]);
                 }
@@ -478,6 +620,12 @@ theme: /
             "buttons" : [ {
               "name" : "Далее",
               "transition" : "/newNode_19"
+            }, {
+              "name" : "Назад",
+              "transition" : "/newNode_15"
+            }, {
+              "name" : "Как заполнять?",
+              "transition" : "/newNode_44"
             } ],
             "type" : "buttons"
           } ],
@@ -493,6 +641,16 @@ theme: /
             intent: /sys/aimylogic/ru/agreement
 
             go!: /newNode_19
+
+        state: 3
+            intent: /newNode_18/3
+
+            go!: /newNode_44
+
+        state: 4
+            intent: /newNode_18/4
+
+            go!: /newNode_15
         init:
             $jsapi.bind({
                 type: "postProcess",
@@ -503,12 +661,20 @@ theme: /
                     {text: "Далее"
                     , transition: "/newNode_19"
                     },
+                    {text: "Назад"
+                    , transition: "/newNode_15"
+                    },
+                    {text: "Как заполнять?"
+                    , transition: "/newNode_44"
+                    },
                   ]);
                 }
             });
 
     state: newNode_19
-        a: Нажмите "Сохранить"
+        a:  Нажмите "Сохранить как черновик", если хотите продолжить работу над проектом
+            или
+            Нажмите "Создать проект"
         image: https://248305.selcdn.ru/zfl_prod/249774977/249774976/DAkHBopo3HM6KLEj.jpg
         go!: /newNode_20
     @IntentGroup
@@ -518,6 +684,9 @@ theme: /
             "buttons" : [ {
               "name" : "Далее",
               "transition" : "/newNode_21"
+            }, {
+              "name" : "Назад",
+              "transition" : "/newNode_17"
             } ],
             "type" : "buttons"
           } ],
@@ -533,6 +702,11 @@ theme: /
             intent: /sys/aimylogic/ru/agreement
 
             go!: /newNode_21
+
+        state: 3
+            intent: /newNode_20/3
+
+            go!: /newNode_17
         init:
             $jsapi.bind({
                 type: "postProcess",
@@ -542,6 +716,9 @@ theme: /
                   $reactions.buttons([
                     {text: "Далее"
                     , transition: "/newNode_21"
+                    },
+                    {text: "Назад"
+                    , transition: "/newNode_17"
                     },
                   ]);
                 }
@@ -565,6 +742,11 @@ theme: /
 
             go!: /newNode_8
 
+        state: 2
+            intent: /sys/aimylogic/ru/negation
+
+            go!: /newNode_41
+
         state: Fallback
             event: noMatch
             go!: /newNode_41
@@ -576,3 +758,13 @@ theme: /
                 handler: function($context) {
                 }
             });
+
+    state: newNode_46
+        a: Все необходимые документы можно найти в Базе знаний || html = "Все необходимые документы можно найти в <a href=\"https://grants.myrosmol.ru/articles?type=file&amp;page=2\">Базе знаний</a>", htmlEnabled = true
+        script:
+            $reactions.timeout({interval: _.template('10 seconds', {variable: '$session'})($session), targetState: '/newNode_26'});
+
+    state: newNode_44
+        a: Следуйте методическим рекомендациям || html = "<a href=\"https://docs.yandex.ru/docs/view?url=ya-disk-public%3A%2F%2FaNUprn77OEdp7VTC1b%2FNO%2BJSMaHM13gLPFDSjkW6gCNdr5b9yq%2Bt2UnFjF%2BuxPw2DqZvSgIch5AN9ddz7ydViQ%3D%3D%3A%2FМетодические%20рекомендации%20участникам%20Росмолодежь.Гранты.pdf&amp;name=Методические%20рекомендации%20участникам%20Росмолодежь.Гранты.pdf&amp;nosw=1\">Следуйте методическим рекомендациям</a>", htmlEnabled = true
+        script:
+            $reactions.timeout({interval: _.template('10 seconds', {variable: '$session'})($session), targetState: '/newNode_17'});
