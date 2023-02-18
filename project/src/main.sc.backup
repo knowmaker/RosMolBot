@@ -153,7 +153,7 @@ theme: /
             destination = 
 
     state: newNode_47
-        a: Для консультации позвоните 84953083001 || html = "Для консультации позвоните 84953083001", htmlEnabled = true
+        a: Для консультации позвоните +74953083103 || html = "Для консультации позвоните +74953083103", htmlEnabled = true
         script:
             $reactions.timeout({interval: _.template('15 seconds', {variable: '$session'})($session), targetState: '/newNode_41'});
 
