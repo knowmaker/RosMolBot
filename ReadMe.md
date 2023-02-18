@@ -20,7 +20,7 @@
 - Git
 
 ### УСТАНОВКА
-Разместите код между тегами <head> на всех страницах грантового модуля
+Разместите код между тегами ```<head>``` на всех страницах грантового модуля
 ```
 <script src="https://bot.jaicp.com/chatwidget/tcKQObFe:ba3d8764e50a5e354894b2dd747e96516c45f112/justwidget.js?force=true" async></script>
 ```
